@@ -6,6 +6,7 @@ atualizarBETA<-function(b,B,spatial,x,sigma,dados){
   beta   <- rmvnorm(1,media,covar)
   return(beta)
 }
+
 # Full conditional for sigma
 atualizarSIGMA<-function(c,C,spatial,x,beta,dados,N){
   alpha1 <- c + 0.5*N
@@ -13,6 +14,7 @@ atualizarSIGMA<-function(c,C,spatial,x,beta,dados,N){
   sigma  <- 1/rgamma(1, alpha1, beta1)
   return(sigma)
 }
+
 # Full conditional for the random effects
 atualizarALPHA<-function(dados,x,beta,sigma,alpha_mean,psi2,m_aux,N){
   z     <- dados-x%*%beta
@@ -21,6 +23,7 @@ atualizarALPHA<-function(dados,x,beta,sigma,alpha_mean,psi2,m_aux,N){
   alpha <- rnorm(N,media,sd)
   return(alpha)
 }
+
 # Full conditional for the hierarchical prior
 atualizarPSI2<-function(c2,C2,alpha,alpha_mean,N){
   alpha1 <- c2 + 0.5*N
@@ -34,6 +37,7 @@ atualizarMALPHA<-function(b2,B2,alpha,psi2,N){
   malpha <- rnorm(1, media, sd)
   return(malpha)
 }
+
 # Variable Selection
 atualizarDELTA<-function(a1,b1,vetorPI){
   delta<-rbeta(1, a1 + sum(vetorPI), b1 + sum(1 - vetorPI))
