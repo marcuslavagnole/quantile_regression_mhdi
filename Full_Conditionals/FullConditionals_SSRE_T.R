@@ -6,6 +6,7 @@ atualizarBETA<-function(b,B,spatial,x,sigma,dados,u){
   beta   <- rmvnorm(1,media,covar)
   return(beta)
 }
+
 # Full conditional for sigma
 atualizarSIGMA<-function(c,C,spatial,x,beta,dados,N,u){
   alpha1 <- c + 0.5*N 
@@ -13,6 +14,7 @@ atualizarSIGMA<-function(c,C,spatial,x,beta,dados,N,u){
   sigma  <- 1/rgamma(1, alpha1, beta1)
   return(sigma)
 }
+
 # Full conditional for the random effects
 atualizarALPHA<-function(dados,x,beta,sigma,alpha_mean,psi2,m_aux,N,u){
   z     <- u*(dados-x%*%beta)
@@ -21,6 +23,7 @@ atualizarALPHA<-function(dados,x,beta,sigma,alpha_mean,psi2,m_aux,N,u){
   alpha <- rnorm(N,media,sd)
   return(alpha)
 }
+
 # Full conditional for the latent variable
 atualizarU<-function(nu,dados,spatial,x,beta,sigma,N){
   alpha <- c(rep(nu/2,N))
@@ -28,6 +31,7 @@ atualizarU<-function(nu,dados,spatial,x,beta,sigma,N){
   u     <- rgamma(N,alpha,beta)
   return(u)
 }
+
 # Full conditional for the degrees of freedom
 condicionalNU<-function(nu,u,N){
   d<-9/(1+sqrt(2))
@@ -36,6 +40,7 @@ condicionalNU<-function(nu,u,N){
   funcao<-priori+verossi
   return(funcao)
 }
+
 # Metropolis-Hasting for the degrees of freedom
 atualizarNU<-function(nu,u,N,clap,clap.aux,M0,t){
   valoratual<-nu
@@ -58,6 +63,7 @@ atualizarNU<-function(nu,u,N,clap,clap.aux,M0,t){
   p.auxiliar<-M0+gama2*(NUfinal-M0)
   return(c(NUfinal,contador,termometro,termometro.aux,p.auxiliar))
 }
+
 # Full conditional for the hierarchical prior
 atualizarPSI2<-function(c2,C2,alpha,alpha_mean,N){
   alpha1 <- c2 + 0.5*N
@@ -71,6 +77,7 @@ atualizarMALPHA<-function(b2,B2,alpha,psi2,N){
   malpha <- rnorm(1, media, sd)
   return(malpha)
 }
+
 # Variable Selection
 atualizarDELTA<-function(a1,b1,vetorPI){
   delta<-rbeta(1, a1 + sum(vetorPI), b1 + sum(1 - vetorPI))
