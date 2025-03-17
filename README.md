@@ -1,4 +1,4 @@
-In this repository, one can find the R routines used in the article [Bayesian variable selection in quantile regression with random effects: An application to Municipal Human Development Index](). It is a joint work with Kelly C. M. Gonçalves and Mario Jorge Mendonça, published in the __Journal of Applied Statistics__.
+In this repository, one can find the R routines used in the article [Bayesian variable selection in quantile regression with random effects: An application to Municipal Human Development Index](). It is a joint work with Kelly C. M. Gonçalves and Mario Jorge Mendonça, published in the _Journal of Applied Statistics_.
 
 In this repository, one can find the R routines used in the article Spatio-temporal instrumental variables regression with missing data: A Bayesian approach. It is a joint work with Kelly C. M. Gonçalves and Mario Jorge Mendonça, published in Computational Economics.
 
