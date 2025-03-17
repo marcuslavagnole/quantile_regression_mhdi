@@ -1,5 +1,8 @@
-Directory with R routines used in:
-**Bayesian variable selection in quantile regression with random effects: An application to Municipal Human Development Index**, Journal of Applied Statistics, 49(13), 3436-3450, 2022.
+In this repository, one can find the R routines used in the article [Bayesian variable selection in quantile regression with random effects: An application to Municipal Human Development Index](). It is a joint work with Kelly C. M. Gonçalves and Mario Jorge Mendonça, published in the __Journal of Applied Statistics__.
+
+In this repository, one can find the R routines used in the article Spatio-temporal instrumental variables regression with missing data: A Bayesian approach. It is a joint work with Kelly C. M. Gonçalves and Mario Jorge Mendonça, published in Computational Economics.
+
+This repo includes:
 
 - **MCMC_SS-RE-GAL.R** : MCMC routine for the quantile regression with random effects and variable selection based on Generalized Asymmetric Laplace distribution;
 - **MCMC_SS-RE-AL.R** : MCMC routine for the quantile regression with random effects and variable selection based on Asymmetric Laplace distribution;
