@@ -16,13 +16,13 @@ x      = scale(base[,c(-1,-dim(base)[2])])
 dados  = log(base$IDHM_renda/(1-base$IDHM_renda))
 numcov = ncol(x)
 
-# Set hyperparameters values
+# Set hyperparameter values
 mu0    <- rep(0,numcov)
 sigma0 <- diag(rep(100,numcov))
 c1 <- 0.01
 C1 <- 0.01
 
-# Define number of iterations
+# Define the number of iterations
 NN = 300000
 
 # Create auxiliary objects
