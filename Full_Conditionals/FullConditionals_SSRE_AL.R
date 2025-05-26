@@ -64,11 +64,11 @@ atualizarPI<-function(n_covariaveis,PI,dados,alpha,covariaveis,beta,v,theta,tau2
     PI_aux[j] <- 0
     beta_j_aux <- c(beta)*PI_aux
     
-    # compute the z variables and the conditional variance
+    # Compute the z variables and the conditional variance
     w  <- dados-alpha-x%*%beta_j_aux-theta*v
     xj <- as.vector(covariaveis[,j])
     
-    # compute chance parameter of the conditional posterior of pi_j (Bernoulli)
+    # Compute the chance parameter of the conditional posterior of pi_j (Bernoulli)
     l0 <- log(1-delta)
     l1 <- log(delta) - 0.5*log(1+Bjj[j,j]*sum(xj^2/v)) +
       (Bjj[j,j]*sum(w*xj/v)^2)/(2*tau2*sigma*(1+Bjj[j,j]*sum(xj^2/v)))  
