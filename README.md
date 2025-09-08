@@ -4,10 +4,8 @@ According to the Atlas of Human Development in Brazil, the income dimension of t
 
 The repo includes:
 
-- **MCMC_SS-RE-GAL.R** : MCMC routine for the quantile regression with random effects and variable selection based on the Generalized Asymmetric Laplace distribution;
-- **MCMC_SS-RE-AL.R** : MCMC routine for the quantile regression with random effects and variable selection based on the Asymmetric Laplace distribution;
-- **MCMC_SS-RE-T.R** : MCMC routine for the linear regression with random effects and variable selection based on the T distribution;
-- **MCMC_SS-RE-N.R** : MCMC routine for the linear regression with random effects and variable selection based on the Normal distribution;
-- Directory **./Full_Conditionals** contains the full conditional distributions for the above models;
-- Directory **./Auxiliary_Functions** contains auxiliary functions for running the above models;
+- **MCMC_vsQR_GAL.R** : MCMC routine for the quantile regression with random effects and variable selection based on the Generalized Asymmetric Laplace distribution;
+- **MCMC_vsQR_AL.R** : MCMC routine for the quantile regression with random effects and variable selection based on the Asymmetric Laplace distribution;
+- **MCMC_vsQR_T.R** : MCMC routine for the linear regression with random effects and variable selection based on the T distribution;
+- **MCMC_vsQR_N.R** : MCMC routine for the linear regression with random effects and variable selection based on the Normal distribution;
 - **data.RData** : real data set.
