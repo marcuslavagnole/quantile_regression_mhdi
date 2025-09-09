@@ -26,7 +26,7 @@ vsQR_re_al <- function(y,x,idobs,tau,n_mcmc,burnin_mcmc,thin_mcmc){
   # Create auxiliary objects
   m_alpha <- matrix(0,n,n_idobs)
   for(l in 1:n){
-    m_alpha[l,as.numeric(base$meso[l])] <- 1 
+    m_alpha[l,as.numeric(idobs[l])] <- 1 
   }
   beta  <- matrix(0, n_mcmc, numcov)
   sigma <- matrix(NA, n_mcmc, 1)
@@ -166,3 +166,4 @@ atualizarPI<-function(numcov,PI,y,alpha,covariaveis,beta,v,theta,tau2,sigma,delt
   }
   return(rbind(PI_aux[1:numcov],chance[1:numcov]))
 }
+
