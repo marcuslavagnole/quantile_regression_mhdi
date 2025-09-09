@@ -6,7 +6,8 @@
 #'
 #' @param y n-dimensional vector of responses.
 #' @param x Matrix - nx(p+1) - of predictors (include the intercept).
-#' @param idobs n-dimensional vector that indicates groups (categorical numerical, from 1 to the number of groups).
+#' @param idobs n-dimensional vector that indicates groups (categorical numerical, 
+#' from 1 to the number of groups).
 #' @param tau Quantile of interest (value between 0 and 1).
 #' @param n_mcmc Number of iterations.
 #' @param burnin_mcmc Number of initial iterations to be discarded.
@@ -166,5 +167,6 @@ atualizarPI<-function(numcov,PI,y,alpha,covariaveis,beta,v,theta,tau2,sigma,delt
   }
   return(rbind(PI_aux[1:numcov],chance[1:numcov]))
 }
+
 
 
