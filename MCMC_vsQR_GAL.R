@@ -6,7 +6,8 @@
 #'
 #' @param y n-dimensional vector of responses.
 #' @param x Matrix - nx(p+1) - of predictors (include the intercept).
-#' @param idobs n-dimensional vector that indicates groups (categorical numerical).
+#' @param idobs n-dimensional vector that indicates groups (categorical numerical, 
+#' from 1 to the number of groups).
 #' @param tau Quantile of interest (value between 0 and 1).
 #' @param n_mcmc Number of iterations.
 #' @param burnin_mcmc Number of initial iterations to be discarded.
@@ -243,4 +244,5 @@ theta_to_gama<-function(theta,L,U){
   gama  <- (U*exp(theta)+L)/(1+exp(theta))
   return(gama)
 }
+
 
