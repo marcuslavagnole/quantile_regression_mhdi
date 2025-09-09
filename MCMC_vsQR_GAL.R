@@ -26,7 +26,7 @@ vsQR_re_gal <- function(y,x,idobs,tau,n_mcmc,burnin_mcmc,thin_mcmc){
   # Create auxiliary objects
   m_alpha <- matrix(0,n,n_idobs)
   for(l in 1:n){
-    m_alpha[l,as.numeric(base$meso[l])] <- 1 
+    m_alpha[l,as.numeric(idobs[l])] <- 1 
   }
   beta  <- matrix(0, n_mcmc, numcov)
   sigma <- matrix(NA, n_mcmc, 1)
@@ -243,3 +243,4 @@ theta_to_gama<-function(theta,L,U){
   gama  <- (U*exp(theta)+L)/(1+exp(theta))
   return(gama)
 }
+
